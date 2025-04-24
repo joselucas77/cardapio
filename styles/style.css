@@ -1,0 +1,59 @@
+/* Global styles */
+:root {
+  --background: #f0f0f0; /* Cor de fundo padrão */
+  --text-color: #333; /* Cor do texto padrão */
+  --primary-color: #007bff; /* Cor primária */
+  --secondary-color: #6c757d; /* Cor secundária */
+}
+
+.main-container {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.inner-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .menu-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-section {
+    grid-column: span 2 / span 2;
+  }
+
+  .content-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content-section {
+    grid-column: span 2 / span 2;
+  }
+}

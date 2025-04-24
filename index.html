@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yatta Lanches</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/cart.css">
+  <link rel="stylesheet" href="/styles/menu.css">
+  <script src="/js/script.js" defer></script>
+  <script src="/js/menu.js" defer></script>
+</head>
+
+<body>
+  <main className="main-container">
+    <div className="inner-container">
+      <h1 className="title">Cardápio Digital</h1>
+
+      <div class="content-container">
+        <div class="content-section">
+          <section class="menu-container">
+            <h2 class="menu-title">Nosso Cardápio</h2>
+            <div class="tabs">
+              <div class="tabs-list">
+                <button class="tab-trigger active" data-tab="hamburgers">Hambúrgueres</button>
+                <button class="tab-trigger" data-tab="snacks">Salgados</button>
+                <button class="tab-trigger" data-tab="drinks">Bebidas</button>
+              </div>
+              <div class="tabs-content" id="tab-hamburgers"></div>
+              <div class="tabs-content hidden" id="tab-snacks"></div>
+              <div class="tabs-content hidden" id="tab-drinks"></div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section id="cart" class="cart-container">
+            <div class="card sticky">
+              <div class="card-header">
+                <h2 class="card-title">
+                  🛒 Seu Pedido
+                </h2>
+              </div>
+              <div class="card-content" id="cart-items">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+              </div>
+              <div class="card-footer">
+                <div class="total">
+                  <span>Total:</span>
+                  <span id="total-value">R$ 0,00</span>
+                </div>
+                <button id="checkout-btn" class="btn" disabled>Finalizar Pedido</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
